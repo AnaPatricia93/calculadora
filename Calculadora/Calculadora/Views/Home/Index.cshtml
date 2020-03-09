@@ -1,8 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Caculadora";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about  <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Calculadora</h1>
+
+    <br /><br />
+
+    <!-- isto é uma linha de comentário  (aparece no browser: serve para quando queremos que o cliente leia os comentários)-->
+    @* e isto é outra linha de comentário (o razor ignora esta linha de comentário que não vai aparecer no browser) *@
+
+<form>
+    <table>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td>
+                @* ver qual a diferença entre colocar o name e o value / o prof explicou, vai ver!*@
+                <input type="submit" name="" value="" />
+            </td>
+
+        </tr>
+
+    </table>
+</form>
+
+
+
+
+
 </div>
