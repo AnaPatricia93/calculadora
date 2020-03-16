@@ -10,17 +10,84 @@
     <!-- isto é uma linha de comentário  (aparece no browser: serve para quando queremos que o cliente leia os comentários)-->
     @* e isto é outra linha de comentário (o razor ignora esta linha de comentário que não vai aparecer no browser) *@
 
-<form>
+<form method="post">
+    <input type="hidden" value="@ViewBag.Operando" name="operando" />
+    <input type="hidden" value="@ViewBag.Operador" name="operador" />
+    <input type="hidden" value="@ViewBag.LimparVisor" name="limparVisor" />
     <table>
         <tr>
-            <td colspan="5"></td>
+            <td colspan="5">
+                <!--Visor:
+                name serve para referenciar o objeto
+                input apenas serve para ler os dados -->
+                <input type="text" value="@ViewBag.Visor" name="visor" readonly="readonly" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @* btn - botao simples vindo do bootstrap (B)*@
+                <!--se der "name" aos botoes temos de os processar individualmente o que é pouco eficiente
+                  se dermos a todos os mesmos botoes o mesmo "name" apenas temos de processar o valor e processo so a variavel visor e a variavel bt-->
+                <input type="submit" name="bt" value="7" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="8" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="9" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value=":" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="+/-" class="btn" />
+            </td>
         </tr>
         <tr>
             <td>
-                @* ver qual a diferença entre colocar o name e o value / o prof explicou, vai ver!*@
-                <input type="submit" name="" value="" />
+                <input type="submit" name="bt" value="4" class="btn" />
             </td>
-
+            <td>
+                <input type="submit" name="bt" value="5" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="6" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="x" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="C" class="btn" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="bt" value="1" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="2" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="3" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="+" class="btn" />
+            </td>
+            <td rowspan="2">
+                <input type="submit" name="bt" value="=" class="btn" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="bt" value="0" class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="," class="btn" />
+            </td>
+            <td>
+                <input type="submit" name="bt" value="-" class="btn" />
+            </td>
         </tr>
 
     </table>
